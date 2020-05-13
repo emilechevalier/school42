@@ -11,7 +11,7 @@ LFLAGS		= -L.
 LIBS		= -lmyLib
 
 # define the object files that this project needs
-OBJFILES	= ex09.o
+OBJFILES	= ex05.o
 
 # define the name of the executable file
 MAIN		= program

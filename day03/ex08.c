@@ -4,52 +4,38 @@
 
 int	ft_atoi(char *str) {
 	int lengthStr;
-	int i, j, pow;
-	int count, countTemp;
+	int i, value;
 	char temp;
-
+	// Compter la longueur de la chaine de caractère et créer une chaine de la même longueur
 	lengthStr = ft_strlen(str);
-	char strNumber[lengthStr]; 	
 
 	if (lengthStr == 0) {
 		return 0;
 	}
-
+	// Place chaque chiffre valable dans la chaine
 	i = 0;
-	count = 0;
+	value = 0;
 	while(* (str + i) != '\0') {
 		temp = * (str + i);
-		if (temp == '0' || temp == '1' || temp == '2' || temp == '3' || temp == '4' ||
+		if (temp == ' ' || temp == '\n'|| temp == '\t') {
+			i++;
+			continue;
+		}
+		else if (temp == '0' || temp == '1' || temp == '2' || temp == '3' || temp == '4' ||
 			temp == '5' || temp == '6' || temp == '7' || temp == '8' ||
 			temp == '9' ) {
-			strNumber[count] = temp;
-			count++;		
+			//Ajouter le nombre à celui existant
+			value = value * 10 + (temp - 48);
+			i++;
+		} else {
+			break;
 		}
-		i++;
 	}
-	strNumber[count] = '\0';
-	i = 0;
-	j = 0;
-	while(* (strNumber + i) != '\0') {
-		ft_putchar(* (strNumber +i));
-		ft_putstr(": ");
-		countTemp = count - 1;
-		pow = 1;
-		while(countTemp > 0) {
-			pow *= 10;
-			countTemp--;
-		}
-		j += (* (strNumber + i) - 48) * pow;
-		ft_putnbr(j);
-		ft_putchar('\n');
-		count--;
-		i++;
-	}
-	return j;
+	return value;
 }
 
 int	main(void) {
-	char str1[] = "/* 3emile69";
+	char str1[] = " \t389emile69";
 	ft_putnbr(ft_atoi(str1));
 	ft_putchar('\n');
 	ft_putnbr(atoi(str1));
