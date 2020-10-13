@@ -57,7 +57,12 @@ void ft_putnbr(int nb) {
 			boolean = 0;
 		} else {
 			reste = quotient / i;
-			ft_putchar(reste + 48);
+			if (reste == 10) {
+				ft_putchar('1');
+				ft_putchar('0');
+			} else {
+				ft_putchar(reste + 48);
+			}
 			quotient = quotient - reste * i;
 			i  = i /10;
 		}
@@ -86,3 +91,20 @@ int	ft_strlen(char * str) {
 	return i;
 }
 
+
+int	ft_is_prime(int nb) {
+	int i, is_prime;
+
+	i = nb / 2;
+	is_prime = 1;
+
+	while (i != 1) {
+		if (nb % i == 0) {
+			is_prime = 0;
+			break;
+		} else {
+			i--;
+		}
+	}
+	return is_prime;
+}
