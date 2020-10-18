@@ -8,7 +8,7 @@ CFLAGS		= -std=c11 -Wall -Wextra -fmax-errors=10
 LFLAGS		= -L.
 
 # define libraries to use
-LIBS		= -lmyLib
+LIBS		= -lft
 
 # define the object files that this project needs
 OBJFILES	= ex20.o
