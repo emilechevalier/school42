@@ -1,4 +1,4 @@
-touch -t 2206012242 file_name = change le timestamp du fichier. 
+touch -t 06012342 file_name = change le timestamp du fichier. 
 
 Si fichier dans le futur, alors l'année est affichée. Il faudra modifier la date du système :)
 
