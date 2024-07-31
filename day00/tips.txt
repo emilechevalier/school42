@@ -1,0 +1,13 @@
+touch -t 2206012242 file_name = change le timestamp du fichier. 
+
+Si fichier dans le futur, alors l'année est affichée. Il faudra modifier la date du système :)
+
+Pour l'affichage, changer le format dans les parametres systèmes.
+
+Droit : 
+CHMOD xxx file_name.
+4 : Read
+2 : Write
+1 : Execute
+
+ln -s = lien symbolic
