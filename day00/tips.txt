@@ -10,4 +10,6 @@ CHMOD xxx file_name.
 2 : Write
 1 : Execute
 
-ln -s = lien symbolic
+ln -s link(destination) fichier_a_creer = lien symbolic
+
+touch -h -t 06012220 test6 pour forcer le changement d'heure d'un fichier pointant vers un autre.
